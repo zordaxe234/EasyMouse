@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<manifest xmlns="http://tizen.org/ns/packages" api-version="4.0" package="org.example.basicuieasymouse" version="1.0.0">
+    <profile name="wearable"/>
+    <ui-application appid="org.example.basicuieasymouse" exec="basicuieasymouse" multiple="false" nodisplay="false" taskmanage="true" type="capp">
+        <label>basicuieasymouse</label>
+        <icon>1-apU_SJSqBYHhslD1kO11Eg-1.jpg</icon>
+    </ui-application>
+    <privileges>
+        <privilege>http://tizen.org/privilege/internet</privilege>
+    </privileges>
+</manifest>
