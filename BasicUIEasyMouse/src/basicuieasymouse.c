@@ -120,31 +120,24 @@ void send_floats(float accelerometer[]) {
     char destination_buffer[100];
     char number_buffer[50];
 
-    int curr_length = 0;
-
     // Vector 1
     gcvt(accelerometer[0], 10, number_buffer);
     strcpy(destination_buffer, number_buffer);
     strcat(destination_buffer, " ");
-    curr_length += strlen(number_buffer);
 
     // Vector 2
     gcvt(accelerometer[1], 10, number_buffer);
     strcat(destination_buffer, number_buffer);
     strcat(destination_buffer, " ");
-    curr_length += strlen(number_buffer);
 
     // Vector 3
     gcvt(accelerometer[2], 10, number_buffer);
     strcat(destination_buffer, number_buffer);
     strcat(destination_buffer, " ");
-    curr_length += strlen(number_buffer);
 
-    // The spaces between the values
-    curr_length += 2;
+
 
     // Print the values and send
-    //printf("Sent the floats: %d %ld %s\n", curr_length, strlen(destination_buffer), destination_buffer);
     send(sock, destination_buffer, strlen(destination_buffer), 0);
 }
 

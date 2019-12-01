@@ -83,10 +83,10 @@ public class EasyMouseServer {
                                 z = 0;
                             }
                             // adding the movement of the mouse
-                            if (x == 0 && y == 0 && z == 0) { //no movement
+                            if (x == 0 && y == 0 && z == 0) { // no movement
                                 continue;
-                            } else if (clickReset == true && z!=0) { // we're clicking, not moving.
-                                clickReset = false; //prevent double clicking
+                            } else if (clickReset == true && z != 0) { // we're clicking, not moving.
+                                clickReset = false; // prevent double clicking
                                 System.out.println("Received: " + x + " " + y + " " + z);
                                 if (z > 0)
                                     System.out.println("Right Click");
@@ -96,9 +96,9 @@ public class EasyMouseServer {
                                 clickReset = true;
                                 Point mousePoint = MouseInfo.getPointerInfo().getLocation();
                                 int currMouseX = mousePoint.x;
-                                int CurrMouseY = mousePoint.y;
+                                int currMouseY = mousePoint.y;
                                 mouseX = currMouseX + (y * MOUSE_SENSITIVITY);
-                                mouseY = CurrMouseY + (x * MOUSE_SENSITIVITY);
+                                mouseY = currMouseY + (x * MOUSE_SENSITIVITY);
                                 robot.mouseMove((int) mouseX, (int) mouseY);
                                 System.out.println("Received: " + x + " " + y + " " + z);
                             }
